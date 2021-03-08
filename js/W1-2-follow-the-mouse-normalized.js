@@ -13,4 +13,12 @@ function setup() {
 
 function draw() {
     background(200);
+    let m = createVector(mouseX, mouseY);
+    let center = createVector(w / 2, h / 2);
+    m.sub(center);
+    m.normalize();
+    m.setMag(200);
+
+    translate (w/2, h/2);
+    line (0,0, m.x, m.y);
 }
